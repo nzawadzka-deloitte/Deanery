@@ -4,6 +4,11 @@ import deanery.Visit;
 import deanery.exception.WrongHour;
 import deanery.exception.WrongNumber;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+
+
 public class Student {
     private String name;
     private String lastName;
@@ -46,9 +51,18 @@ public class Student {
         return type;
     }
 
-    public String serve(String room, Integer hour) throws WrongNumber, WrongHour {
+    public void serve(String room, Integer hour) throws WrongNumber, WrongHour {
         Visit.visitation(this, room, hour);
-
-        return "s";
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
+        System.out.println("------------------------------");
+        System.out.format("%22s", "STUDENT " + studentID+"\n");
+        System.out.format("First Name    |" );
+        System.out.println(name);
+        System.out.format("Second Name   |");
+        System.out.println(lastName);
+        System.out.println("Raport generated on " + dtf.format(now));
+        System.out.println("Room number " + room);
+        System.out.println("------------------------------");
     }
 }

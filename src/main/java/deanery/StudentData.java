@@ -18,7 +18,7 @@ public class StudentData {
 
         List<Student> students = new ArrayList<>(List.of(fullTimeStudent1, fullTimeStudent2, fullTimeStudent3, partTimeStudent1,
         partTimeStudent2, partTimeStudent3));
-
+        System.out.println(students);
         return students;
     }
 
