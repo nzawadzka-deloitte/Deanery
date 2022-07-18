@@ -1,9 +1,10 @@
-package deanery;
+package deanery.student;
 
 public class Student {
     private String name;
     private String lastName;
     private int studentID;
+
 
     public Student(String name, String lastName, int studentID) {
         this.name = name;
