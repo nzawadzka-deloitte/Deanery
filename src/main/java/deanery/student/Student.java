@@ -1,9 +1,14 @@
 package deanery.student;
 
+import deanery.Visit;
+import deanery.exception.WrongHour;
+import deanery.exception.WrongNumber;
+
 public class Student {
     private String name;
     private String lastName;
     private int studentID;
+    private String type;
 
 
     public Student(String name, String lastName, int studentID) {
@@ -37,4 +42,13 @@ public class Student {
     }
 
 
+    public String getType() {
+        return type;
+    }
+
+    public String serve(String room, Integer hour) throws WrongNumber, WrongHour {
+        Visit.visitation(this, room, hour);
+
+        return "s";
+    }
 }

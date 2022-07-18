@@ -7,7 +7,7 @@ import deanery.student.Student;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Data {
+public class StudentData {
     public static List<Student> createData(){
         Student fullTimeStudent1 = new FullTimeStudent("Natalia", "Zawadzka", 252706);
         Student fullTimeStudent2 = new FullTimeStudent("Marcelina", "Bielecka", 252707);
@@ -21,4 +21,6 @@ public class Data {
 
         return students;
     }
+
+
 }
